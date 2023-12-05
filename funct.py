@@ -3,6 +3,7 @@ from LLM_funct import create_model
 
 
 def change_model():
+    clear_chat()
     llm_task = st.session_state["llm_task"]
     llm_name = list(st.session_state.models_per_task[llm_task])[st.session_state.llm_name]
     llm_temp = st.session_state["llm_temp"]
@@ -16,7 +17,7 @@ def change_model():
     
 
 def reset_values():
-    st.session_state["llm_task"]="Text2Text Generation"
+    st.session_state["llm_task"]="Text Generation"
     st.session_state["llm_name"] =0
     st.session_state["llm_temp"]=0.5
     st.session_state["llm_maxlen"]=50

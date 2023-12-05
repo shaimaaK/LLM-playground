@@ -77,13 +77,13 @@ if prompt:=st.chat_input("write your message here"):
     convo= f"user:{prompt} \n\n"
     for msg in st.session_state.chat_history:
         if msg['role'] =="user":
-            convo=convo+f"user: {msg['content']} \n\n"
+            convo=convo+f" {msg['content']} \n\n"
         else:
-            convo=convo+f"assistant: {msg['content']} \n\n"
+            convo=convo+f" {msg['content']} \n\n"
     with st.spinner('Generate '+llm_name+ " Response"):
         response=generate_answer(st.session_state.curnt_llm, convo, list(st.session_state.models_per_task["Text Generation"])[st.session_state.llm_name])
     with st.chat_message("assistant"):
-        st.markdown(llm_name+" : "+response)
+        st.markdown(response)
     st.session_state.chat_history.append({"role":"assistant", "content":response})
 
 
