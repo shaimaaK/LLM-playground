@@ -10,8 +10,7 @@ Large Language Model Playground: experiment with Llama2, Falcon, GPT, and Flan c
 | **falcon-7b-instruct** | TII        | 7 Billion      | Yes                            | Yes             | [Click He](https://huggingface.co/tiiuae/falcon-7b-instruct) |
 | **flan-ul2**           | Google     | 20 Billion     | Yes                            | Yes             | [Click He](https://huggingface.co/google/flan-ul2)           |
 
-
-## Control the LLM-powered chatbot using LLM parameters
+## Control the LLM powered chatbot using LLM parameters
 - **Six LLM models**: Change the used model
 - **Temperature range [0.1-1]**: Control the creativity of the answer 
 - **Output length range [1-1000]**: Control the output's maximum number of tokens
